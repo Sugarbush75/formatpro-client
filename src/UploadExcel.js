@@ -38,7 +38,6 @@ const UploadExcel = () => {
     formData.append("template", template);
 
     try {
-      const BASE_URL = "https://formatpro-backend.onrender.com";
       const response = await axios.post(`${BASE_URL}/upload`, formData);
       console.log("Upload response:", response.data);
 
