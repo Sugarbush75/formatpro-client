@@ -3,7 +3,7 @@ import * as XLSX from "xlsx";
 import axios from "axios";
 
 const UploadExcel = () => {
-  const [excelData, setExcelData] = useState([]);
+// const [excelData, setExcelData] = useState([]);
   const [template, setTemplate] = useState("standard");
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewLines, setPreviewLines] = useState([]);
