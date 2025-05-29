@@ -21,7 +21,6 @@ const UploadExcel = () => {
       const workbook = XLSX.read(binaryStr, { type: "binary" });
       const sheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[sheetName];
-      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
     };
     reader.readAsBinaryString(file);
   };
