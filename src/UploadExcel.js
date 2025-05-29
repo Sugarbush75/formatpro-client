@@ -36,7 +36,8 @@ const UploadExcel = () => {
     formData.append("template", template);
 
     try {
-      const response = await axios.post("http://localhost:5000/upload", formData);
+      const BASE_URL = "https://formatpro-backend.onrender.com";
+      const response = await axios.post(`${BASE_URL}/upload`, formData);
       console.log("Upload response:", response.data);
 
       if (response.data.preview && response.data.preview.length > 0) {
@@ -95,7 +96,7 @@ const UploadExcel = () => {
                 formData.append("template", template);
 
                 try {
-                  const response = await axios.post("http://localhost:5000/download", formData, {
+                  const response = await axios.post(`${BASE_URL}/download`, formData, {
                     responseType: "blob",
                   });
 
